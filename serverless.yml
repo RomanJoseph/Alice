@@ -1,18 +1,18 @@
 service: nest-serverless-alice-lambda
 
 plugins:
- - 'serverless-plugin-typescript'
- - serverless-plugin-optimize
- - serverless-offline
+  - 'serverless-plugin-typescript'
+  - serverless-plugin-optimize
+  - serverless-offline
 
 provider:
- name: aws
- runtime: nodejs20.x
+  name: aws
+  runtime: nodejs20.x
 
 functions:
- main:
-   handler: src/infra/aws/lambda/lambda.handler
-   events:
-     - http:
-         method: get
-         path: /
+  main:
+    handler: src/infra/aws/lambda/lambda.handler
+    events:
+      - http:
+          method: get
+          path: /test

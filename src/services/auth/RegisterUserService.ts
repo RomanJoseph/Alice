@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
 import { registerUserServiceCommand } from './commands/registerUserServiceCommand';
-import { EncryptService } from 'src/infra/encrypt/EncryptService';
-import { UserPostgresAdapter } from 'src/infra/typeorm/authModule/adapters/UserPostgresAdapter';
-import { User } from 'src/infra/typeorm/authModule/entities/user.entity';
+import { UserPostgresAdapter } from '../../infra/typeorm/authModule/adapters/UserPostgresAdapter';
+import { User } from '../../infra/typeorm/authModule/entities/user.entity';
+import { EncryptService } from '../../infra/encrypt/EncryptService';
 
 @Injectable()
 export class RegisterUserService {
